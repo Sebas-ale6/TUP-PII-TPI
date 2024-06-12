@@ -4,7 +4,7 @@
 Sebastian Morcillo, Legajo: 53233
 Julieta Maragliano Legajo: 53049
 Ezequiel Maciel Legajo: 53171
-Martin Plaza Legajo:
+Martin Plaza Legajo: 53279
 
 > Comision: 1TUP6
 
