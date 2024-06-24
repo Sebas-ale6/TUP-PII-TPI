@@ -1,9 +1,6 @@
 from jugador import Jugador
 
 class Mineria:
-    def __init__(self, jugador: Jugador):
-        self.jugador = jugador
-
     def picar(self):
         experiencia = 35
         self.jugador.ganar_experiencia("mineria", experiencia)
