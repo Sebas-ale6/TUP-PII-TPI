@@ -1,28 +1,12 @@
-from experiencia import Experiencia
-
 class Jugador:
-    def __init__(self, nombre: str, vida: int = 100, habilidad_agricultura: int = 0, habilidad_mineria: int = 0, habilidad_combate: int = 0):
+    def __init__(self, nombre: str, vida: int = 100):
         self.nombre = nombre
-        self.botas = []
         self.vida = vida
-        self.habilidad_agricultura = habilidad_agricultura
-        self.habilidad_mineria = habilidad_mineria
-        self.habilidad_combate = habilidad_combate
+        self.habilidades = {"agricultura": 0, "minería": 0, "combate": 0}
 
-    def experiencia_agricultura(self, experiencia: Experiencia):
-        if experiencia.tipo == "Agricultura":
-            self.habilidad_agricultura += experiencia.valor
+    def ganar_experiencia(self, tipo: str, valor: int):
+        if tipo in self.habilidades:
+            self.habilidades[tipo] = min(self.habilidades[tipo] + valor, 100)
+            print(f"Ganaste {valor} puntos de experiencia en {tipo}. Nivel de {tipo} actual: {self.habilidades[tipo]}")
         else:
-            raise ValueError("La experiencia no es de tipo Agricultura")
-
-    def experiencia_mineria(self, experiencia: Experiencia):
-        if experiencia.tipo == "Minería":
-            self.habilidad_mineria += experiencia.valor
-        else:
-            raise ValueError("La experiencia no es de tipo Minería")
-
-    def experiencia_combate(self, experiencia: Experiencia):
-        if experiencia.tipo == "Combate":
-            self.habilidad_combate += experiencia.valor
-        else:
-            raise ValueError("La experiencia no es de tipo Combate")
+            raise ValueError(f"Tipo de experiencia desconocido: {tipo}")

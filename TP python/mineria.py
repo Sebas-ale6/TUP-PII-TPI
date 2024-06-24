@@ -1,9 +1,9 @@
-from experiencia import Experiencia
-
 class Mineria:
-    def __init__(self):
-        self.experiencia_generada = 0
-
     def picar(self):
-        experiencia_generada = 15
-        return Experiencia("Minería", experiencia_generada, "Has picado un mineral.")
+        return {"tipo": "minería", "valor": 35, "descripcion": "Has picado minerales en la mina"}
+    
+    def explorar_cuevas(self):
+       return {"tipo": "minería", "valor": 30, "descripcion": "Has explorado las minas."}
+
+    def recoger_minerales(self):
+        return {"tipo": "minería", "valor": 35, "descripcion": "Has recogido el mineral."}
