@@ -1,12 +1,25 @@
+from jugador import Jugador
+
 class Agricultura:
+    def __init__(self, jugador: Jugador):
+        self.jugador = jugador
+
     def trabajar(self):
-        return {"tipo": "agricultura", "valor": 25, "descripcion": "Has trabajado en el campo"}
+        experiencia = 25
+        self.jugador.ganar_experiencia("agricultura", experiencia)
+        return {"tipo": "agricultura", "valor": experiencia, "descripcion": "Has trabajado en el campo"}
 
     def alimentar_animales(self):
-        return {"tipo": "agricultura", "valor": 25, "descripcion": "Has alimentado a los animales"}
-    
+        experiencia = 25
+        self.jugador.ganar_experiencia("agricultura", experiencia)
+        return {"tipo": "agricultura", "valor": experiencia, "descripcion": "Has alimentado a los animales"}
+
     def talar_arboles(self):
-        return {"tipo": "agricultura", "valor": 25, "descripcion": "Has talado arboles"}
-    
+        experiencia = 25
+        self.jugador.ganar_experiencia("agricultura", experiencia)
+        return {"tipo": "agricultura", "valor": experiencia, "descripcion": "Has talado arboles"}
+
     def cultivar(self):
-        return {"tipo": "agricultura", "valor": 25, "descripcion": "Has cultivado las plantas"}
+        experiencia = 25
+        self.jugador.ganar_experiencia("agricultura", experiencia)
+        return {"tipo": "agricultura", "valor": experiencia, "descripcion": "Has cultivado las plantas"}
