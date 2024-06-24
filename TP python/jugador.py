@@ -2,7 +2,7 @@ class Jugador:
     def __init__(self, nombre: str, vida: int = 100):
         self.nombre = nombre
         self.vida = vida
-        self.habilidades = {"agricultura": 0, "minería": 0, "combate": 0}
+        self.habilidades = {"agricultura": 0, "mineria": 0, "combate": 0}
 
     def ganar_experiencia(self, tipo: str, valor: int):
         if tipo in self.habilidades:

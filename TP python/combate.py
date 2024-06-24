@@ -8,7 +8,7 @@ class Combate:
     def iniciar_combate(self):
         resultado_combate = random.random()  
         if resultado_combate < 0.5:  # 50% de probabilidad de ganar
-            experiencia_ganada = 25
+            experiencia_ganada = 50
             self.jugador.ganar_experiencia("combate", experiencia_ganada)
         else:
             vida_perdida = 20
