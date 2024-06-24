@@ -1,7 +1,11 @@
 from jugador import Jugador
 
 class Mineria:
+
+    def __init__(self, jugador: Jugador):
+
     def _init_(self, jugador: Jugador):
+
         self.jugador = jugador
 
     def picar(self):
