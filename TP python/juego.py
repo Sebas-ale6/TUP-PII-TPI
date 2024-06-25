@@ -79,7 +79,13 @@ def main():
         limpiar_consola()  # Limpia la consola antes de mostrar el menú
         mostrar_menu()
         opcion = input("Seleccione la actividad que desea realizar: ")
-
+        
+        ########### MARTIN SUBIO ESTO ############
+        if jugador.habilidades["agricultura"] >= 50 and jugador.habilidades["mineria"] >= 50 and jugador.habilidades["combate"] >= 50:      ########### MARTIN SUBIO ESTO ############
+            print("GAME OVER: ganaste el juego, sos crack")
+            break
+        ########### MARTIN SUBIO ESTO ############
+        
         if opcion == '1':
             menu_agricultura(agricultura)
         elif opcion == '2':
@@ -87,6 +93,11 @@ def main():
         elif opcion == '3':
             limpiar_consola()
             combate.iniciar_combate()
+            ########### MARTIN SUBIO ESTO ############
+            if jugador.vida == 0:
+                print("GAME OVER(es lo mejor que te pudo pasar, dedicate a otra cosa)")          ########### MARTIN SUBIO ESTO ############
+                break
+            ########### MARTIN SUBIO ESTO ############
             input("\nPresione Enter para volver al menú...")
         elif opcion == '4':
             limpiar_consola()
