@@ -70,7 +70,7 @@ def menu_mineria(mineria):
 
 def main():
     # Crear instancias de clases
-    jugador = Jugador(nombre="Juan")
+    jugador = Jugador(nombre="Goku")
     agricultura = Agricultura(jugador=jugador)
     mineria = Mineria(jugador=jugador)
     combate = Combate(jugador=jugador)
