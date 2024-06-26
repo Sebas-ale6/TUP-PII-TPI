@@ -6,6 +6,6 @@ class Jugador:
 
     def ganar_experiencia(self, tipo: str, valor: int):
         if tipo in self.habilidades:
-            self.habilidades[tipo] = min(self.habilidades[tipo] + valor, 100)
+            self.habilidades[tipo] = self.habilidades[tipo] + valor
             print(f"Ganaste {valor} puntos de experiencia en {tipo}. Nivel de {tipo} actual: {self.habilidades[tipo]}")
         
