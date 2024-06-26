@@ -9,8 +9,8 @@ def limpiar_consola():
 
 def mostrar_menu():
     print("Bienvenido al juego!")
-    print("Hola usuario! Soy tu personaje, puedes hacer que yo haga una variedad limitada de actividades(agricultura, mineria, combate) en las cuales ire juntando la experiencia necesaria para triunfar en nuestra aventura.")
-    print("Y bien? Que desea hacer?: ")
+    print("Hola usuario! Soy tu personaje, podes hacer que yo haga una variedad limitada de actividades(agricultura, mineria, combate) en las cuales ire juntando la experiencia necesaria para triunfar en nuestra aventura.")
+    print("Y? Que deseas hacer?: ")
     print("1. Realizar actividad de agricultura")
     print("2. Realizar actividad de minería")
     print("3. Iniciar combate")
@@ -69,7 +69,7 @@ def menu_mineria(mineria):
         input("\nPresione Enter para volver al menú...")
 
 def main():
-    # Crear instancias de clases
+    # Crea las instancias de clases
     jugador = Jugador(nombre="Miguel")
     agricultura = Agricultura(jugador=jugador)
     mineria = Mineria(jugador=jugador)
