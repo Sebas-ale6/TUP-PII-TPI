@@ -70,7 +70,7 @@ def menu_mineria(mineria):
 
 def main():
     # Crear instancias de clases
-    jugador = Jugador(nombre="Goku")
+    jugador = Jugador(nombre="Miguel")
     agricultura = Agricultura(jugador=jugador)
     mineria = Mineria(jugador=jugador)
     combate = Combate(jugador=jugador)
@@ -80,11 +80,9 @@ def main():
         mostrar_menu()
         opcion = input("Seleccione la actividad que desea realizar: ")
         
-        ########### MARTIN SUBIO ESTO ############
-        if jugador.habilidades["agricultura"] >= 50 and jugador.habilidades["mineria"] >= 50 and jugador.habilidades["combate"] >= 50:      ########### MARTIN SUBIO ESTO ############
-            print("GAME OVER: ganaste el juego, sos crack")
+        if jugador.habilidades["agricultura"] >= 50 and jugador.habilidades["mineria"] >= 50 and jugador.habilidades["combate"] >= 50:      
+            print("GANASTE! (sos crack)")
             break
-        ########### MARTIN SUBIO ESTO ############
         
         if opcion == '1':
             menu_agricultura(agricultura)
@@ -93,11 +91,8 @@ def main():
         elif opcion == '3':
             limpiar_consola()
             combate.iniciar_combate()
-            ########### MARTIN SUBIO ESTO ############
             if jugador.vida == 0:
-                print("GAME OVER(es lo mejor que te pudo pasar, dedicate a otra cosa)")          ########### MARTIN SUBIO ESTO ############
-                break
-            ########### MARTIN SUBIO ESTO ############
+                print("GAME OVER")          
             input("\nPresione Enter para volver al menú...")
         elif opcion == '4':
             limpiar_consola()
