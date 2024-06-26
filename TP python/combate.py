@@ -12,5 +12,5 @@ class Combate:
             self.jugador.ganar_experiencia("combate", experiencia_ganada)
         else:
             vida_perdida = 20
-            self.jugador.vida = max(self.jugador.vida - vida_perdida, 0)
+            self.jugador.vida = self.jugador.vida - vida_perdida
             print(f"Perdiste {vida_perdida} puntos de vida. Vida actual: {self.jugador.vida}")
