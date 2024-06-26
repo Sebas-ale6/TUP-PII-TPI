@@ -77,12 +77,14 @@ def main():
 
     while True:
         limpiar_consola()  # Limpia la consola antes de mostrar el menú
-        mostrar_menu()
-        opcion = input("Seleccione la actividad que desea realizar: ")
-        
         if jugador.habilidades["agricultura"] >= 50 and jugador.habilidades["mineria"] >= 50 and jugador.habilidades["combate"] >= 50:      
             print("GANASTE! (sos crack)")
             break
+
+        mostrar_menu()
+        opcion = input("Seleccione la actividad que desea realizar: ")
+        
+        
         
         if opcion == '1':
             menu_agricultura(agricultura)
